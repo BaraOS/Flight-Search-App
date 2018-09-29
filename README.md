@@ -4,7 +4,7 @@ This is a flight search app which allows users to create flight affiliate search
 
 # Notice
 
-In order to use the application users must obtain a valid Sandbox Api Key from ![Alt text](https://sandbox.amadeus.com/) and paste it within the quotation marks of (var api_key = "";)
+In order to use the application users must obtain a valid Sandbox Api Key from https://sandbox.amadeus.com/ and paste it within the quotation marks of (var api_key = "";)
 
 # Built Using
 
