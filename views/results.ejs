@@ -1,0 +1,51 @@
+
+<% include ./partials/header%>
+
+
+<h1 style="text-align: center;">Flights</h1>
+
+
+
+
+<div class="container">
+	<% data["results"].forEach(function(flight){ %>
+	<div class="card horizontal" style="padding-top: 40px; padding-right: 30px;">
+	  	
+	  	<div class="row" style="text-align: center;">
+	      
+	      <div class="col l4 m12 s12"><img src="image.png"></div>
+	      
+	      <div class="col l2 m12 s12">
+	      	<div class="row">
+	      		<% flight["outbound"]["flights"].forEach(function(flights){ %>
+	      		<div class="col s12">AI-<%= flights["flight_number"] %></div>
+	      		<div class="col s12"><h5><%= flights["origin"]["airport"] %> <i class="material-icons">flight_takeoff</i> <%= flights["destination"]["airport"] %></h5></div>
+	      		<div class="col s12">Depart: <%=  moment(flights["departs_at"]).format('HH:mm'); %></div>
+	      		<div class="col s12">Arrive: <%= moment(flights["arrives_at"]).format('HH:mm');  %></div>
+	      		<% }); %>
+	      	</div>
+	      </div>
+	      
+	      <div class="col l2 m12 s12">
+	      	<div class="row">
+	      		<% flight["inbound"]["flights"].forEach(function(flights){ %>
+	      		<div class="col s12">AI-<%= flights["flight_number"] %></div>
+	      		<div class="col s12"><h5><%= flights["origin"]["airport"] %> <i class="material-icons">flight_takeoff</i> <%= flights["destination"]["airport"] %></h5></div>
+	      		<div class="col s12">Depart: <%= moment(flights["departs_at"]).format('HH:mm');  %></div>
+	      		<div class="col s12">Arrive: <%= moment(flights["arrives_at"]).format('HH:mm'); %></div>
+	      		<% }); %>
+	      	</div>
+	      </div>
+	      
+	      <div class="col l2 m12 s12"><h4>$ <%= flight["fare"]["total_price"] %> </h4></div>
+	      
+	      <div class="col l2 m12 s12"><a href="<%= flight['deep_link'] %>" class="waves-effect waves-light btn-large" style="border-radius: 15px;">Select</a></div>
+    	</div>	
+    	
+	</div>
+	<% }); %>
+</div>
+
+
+
+<% include ./partials/footer%>

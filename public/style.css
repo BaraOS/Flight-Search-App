@@ -1,0 +1,52 @@
+body{
+	background: #EEEEEE;
+}
+
+.banner{
+	background:  linear-gradient(
+      rgba(255, 0, 0, 0.25), 
+      rgba(255, 0, 0, 0.25)
+    ), url('banner.jpeg') no-repeat center;
+	
+	background-size: cover;
+	width: 100%;
+	height: 500px;
+}
+
+.nav-wrapper {
+	background-color: #C62828;
+}
+
+
+
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+	background-color: white;
+	border-radius: 3px;
+	
+	padding-left: 10px;
+
+}
+
+form{
+	padding-top: 200px;
+}
+
+
+.btn, .btn-large {
+	background: #C62828;
+	height: 3rem;
+}
+
+.picker__date-display {
+	background-color: #C62828;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+form{
+	padding-top: 20px;
+}
+
+}
